@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temporizador de Trabajo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Temporizador de Trabajo</h1>
+        <div class="row">
+            <div>
+                <input type="number" id="customMinutes" placeholder="Minutos" min="1">
+                <button id="setTimerButton">Establecer Tiempo</button>
+            </div>
+            <div id="timer">60:00</div>
+            <div>
+                <button id="startButton">Empezar</button>
+                <button id="stopButton">Detener</button>
+                <button id="resetButton">Reiniciar</button>
+            </div>
+        </div>
+        <button id="toggleDarkMode">Modo Oscuro</button>
+        
+        <div class="row">
+            <div>
+                <h2>Lista de Tareas</h2>
+                <input type="text" id="taskInput" placeholder="Nueva Tarea">
+                <button id="addTaskButton">Agregar Tarea</button>
+                <ul id="taskList"></ul>
+            </div>
+            <div>
+                <h2>Agregar Video de Descanso</h2>
+                <input type="text" id="videoLink" placeholder="Enlace del video">
+                <button id="addVideoButton">Agregar Video</button>
+                <div id="videoList"></div>
+                <div id="videoPlayer" style="display: none;">
+                    <h2>Video de Descanso</h2>
+                    <iframe id="videoFrame" width="560" height="315" frameborder="0" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div>
+                <h2>Notas Rápidas</h2>
+                <textarea id="notes" placeholder="Escribe tus notas aquí..."></textarea>
+            </div>
+            <div>
+                <h2>Estadísticas de Trabajo</h2>
+                <div id="workStats">Tiempo trabajado hoy: 0 horas, 0 minutos</div>
+            </div>
+        </div>
+
+        <h2>Cronómetros de Edición</h2>
+        <div>
+            <input type="text" id="chronoName" placeholder="Nombre del Cronómetro">
+            <button id="addChronoButton">Agregar Cronómetro</button>
+        </div>
+        <div id="chronoList"></div>
+    </div>
+    <audio id="alarmSound" src="alarm.mp3" preload="auto"></audio>
+    <script src="script.js"></script>
+</body>
+</html>
